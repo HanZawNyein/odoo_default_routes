@@ -1,0 +1,13 @@
+{
+    // {{host}}/web/dataset/call_kw/
+    "jsonrpc": "2.0",
+    "params": {
+        "model": "sale.order",
+        "method":"read",
+        "args": [
+            [26],["id","name","date_order","partner_id","order_line"]
+        ],
+        
+        "kwargs": {}
+    }
+}

@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "0b8c90fa-b48e-476a-8b13-ee222e32245d",
+		"name": "Odoo Default Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27594865",
+		"_collection_link": "https://winter-spaceship-122830.postman.co/workspace/MSIS~5fa6e28c-5510-42ce-bc46-e3324093a8ae/collection/27594865-0b8c90fa-b48e-476a-8b13-ee222e32245d?action=share&source=collection_link&creator=27594865"
+	},
+	"item": [
+		{
+			"name": "search read",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"params\":{\n        \"model\":\"res.partner\",\n        \"fields\":[\"id\",\"name\"],\n        \"offset\":0,\n        \"limit\":false,\n        \"domain\":null,\n        \"sort\":null\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/web/dataset/search_read"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    // {{host}}/web/dataset/call_kw\n    \"jsonrpc\": \"2.0\",\n    \"params\": {\n        \"model\": \"res.partner\",\n        \"method\":\"create\",\n        \"args\": [\n            {\n            \"name\":\"Han\"\n            }\n        ],\n        \n        \"kwargs\": {}\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/web/dataset/call_kw"
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    // {{host}}/api/dataset/call_kw/\n    \"jsonrpc\": \"2.0\",\n    \"params\": {\n        \"model\": \"sale.order\",\n        \"method\":\"read\",\n        \"args\": [\n            [26],[\"id\",\"name\",\"date_order\",\"partner_id\",\"order_line\"]\n        ],\n        \n        \"kwargs\": {}\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/api/dataset/call_kw/"
+			},
+			"response": []
+		},
+		{
+			"name": "write",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    // {{host}}/web/dataset/call_kw/\n    \"jsonrpc\": \"2.0\",\n    \"params\": {\n        \"model\": \"res.partner\",\n        \"method\":\"write\",\n        \"args\": [\n            [26],{\"email\":\"test@gmail.com\"}\n        ],\n        \n        \"kwargs\": {}\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/web/dataset/call_kw/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"params\": {\n        \"model\": \"res.partner\",\n        \"method\":\"unlink\",\n        \"args\": [\n            [53]\n        ],\n        \n        \"kwargs\": {}\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/web/dataset/call_kw/"
+			},
+			"response": []
+		},
+		{
+			"name": "call button",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    // {{host}}/web/dataset/call_kw\n    \"jsonrpc\": \"2.0\",\n    \"params\": {\n        \"model\": \"sale.order\",\n        \"method\":\"action_confirm\",\n        \"args\": [\n            [28]\n        ],\n        \n        \"kwargs\": {}\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/web/dataset/call_kw"
+			},
+			"response": []
+		}
+	]
+}

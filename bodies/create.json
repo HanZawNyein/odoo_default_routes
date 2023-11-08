@@ -1,0 +1,15 @@
+{
+    // {{host}}/web/dataset/call_kw
+    "jsonrpc": "2.0",
+    "params": {
+        "model": "res.partner",
+        "method":"create",
+        "args": [
+            {
+            "name":"Han"
+            }
+        ],
+        
+        "kwargs": {}
+    }
+}

@@ -1,0 +1,13 @@
+{
+    // {{host}}/web/dataset/call_kw/
+    "jsonrpc": "2.0",
+    "params": {
+        "model": "res.partner",
+        "method":"write",
+        "args": [
+            [26],{"email":"test@gmail.com"}
+        ],
+        
+        "kwargs": {}
+    }
+}

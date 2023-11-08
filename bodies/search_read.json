@@ -1,0 +1,12 @@
+{
+    // {{host}}/web/dataset/search_read
+    "jsonrpc":"2.0",
+    "params":{
+        "model":"res.partner",
+        "fields":["id","name"],
+        "offset":0,
+        "limit":false,
+        "domain":null,
+        "sort":null
+    }
+}
